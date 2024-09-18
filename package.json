@@ -8,9 +8,7 @@
   "author": "TODO",
   "license": "AGPL-3.0-only",
   "scripts": {
-    "legacy": "node packages/legacy/dist/app.js"
   },
   "workspaces": [
-    "packages/legacy"
   ]
 }
