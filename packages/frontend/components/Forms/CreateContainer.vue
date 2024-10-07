@@ -169,7 +169,8 @@ export default {
                     // Is this a proper description? Should it say "reporting key" or something?
                     description: this.description,
                     tags: tag_set,
-                    children_key: '',
+                    children_key: [],
+                    children_name: [],
                     hasParent: true,
                     isReportingKey: true,
                 }, this.pictures || [])
@@ -182,7 +183,7 @@ export default {
                         console.error('Create Reporting Key Failed:', error);
                     });
                 childrenDeviceList.push(reportingKey);
-                childrenDeviceName.push(name);
+                childrenDeviceName.push(this.name);
             }
 
             if (numChildren) {
@@ -209,7 +210,8 @@ export default {
                         deviceName: childName,
                         description: this.description,  // need to see if we want a special description when making a child
                         tags:this.tags,
-                        children_key: '',
+                        children_key: [],
+                        children_name: [],
                         hasParent: true,
                         isReportingKey: false
                     }, this.pictures || [])

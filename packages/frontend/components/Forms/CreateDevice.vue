@@ -60,7 +60,8 @@ export default {
             name: '',
             description: '',
             tags: [] as string[],
-            children_key: '',
+            children_key: [] as string[],
+            children_name: [] as string[],
             hasParent: false, // states whether a device is contained within a box/container
             pictures: [] as File[] | null,
         }
@@ -85,7 +86,8 @@ export default {
                 deviceName: this.name,
                 description: this.description,
                 tags: this.tags,
-                children_key: '',
+                children_key: [],
+                children_name: [],
                 hasParent: false,
                 isReportingKey: false,
             }, this.pictures || [])
