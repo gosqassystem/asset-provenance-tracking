@@ -369,6 +369,7 @@ async function getStatistics(request: HttpRequest, context: InvocationContext): 
     };
 };
 
+
 app.get("getProvenance", {
     authLevel: 'anonymous',
     route: 'provenance/{deviceKey}',
